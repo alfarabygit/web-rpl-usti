@@ -3,20 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- link cdn remixicons -->
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/usti.jpg" type="image/x-icon" />
+
+    <!--=============== FONT AWESOME ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!--=============== REMIXICONS ===============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
-    <!-- link css -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
-    <title>RPL Universitas Sains dan Teknologi Indonesia(USTI)</title>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>RPL Universitas Sains dan Teknologi Indonesia(USTI) - Home</title>
   </head>
   <body>
-    <!-- header -->
+    <!--=============== HEADER ===============-->
     <header class="header">
       <nav class="nav container">
         <div class="nav__data">
-          <a href="#" class="nav__logo"> <img src="assets/img/usti.png" alt="image" /> RPL USTI </a>
+          <a href="index.html" class="nav__logo">
+            <img src="assets/img/usti.png" alt="" width="55px" />
+            <span>RPL USTI</span>
+          </a>
 
           <div class="nav__toggle" id="nav-toggle">
             <i class="ri-menu-line nav__burger"></i>
@@ -27,45 +39,181 @@
         <!--=============== NAV MENU ===============-->
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
-            <li><a href="#" class="nav__link">Home</a></li>
+            <li><a href="index.html" class="nav__link">Home</a></li>
+
+            <li><a href="about.html" class="nav__link">Tentang RPL</a></li>
 
             <!--=============== DROPDOWN 1 ===============-->
             <li class="dropdown__item">
-              <div class="nav__link">Tentang <i class="ri-arrow-down-s-line dropdown__arrow"></i></div>
+              <div class="nav__link">Program Studi <i class="ri-arrow-down-s-line dropdown__arrow"></i></div>
 
               <ul class="dropdown__menu">
                 <li>
-                  <a href="#" class="dropdown__link">Sejarah </a>
+                  <a href="tik.html" class="dropdown__link"> Teknik Informatika </a>
                 </li>
                 <li>
-                  <a href="#" class="dropdown__link">Visi & Misi</a>
-                </li>
-                <!--=============== DROPDOWN SUBMENU ===============-->
-              </ul>
-            </li>
-
-            <!--=============== DROPDOWN 2 ===============-->
-            <li class="dropdown__item">
-              <div class="nav__link">Program Studi<i class="ri-arrow-down-s-line dropdown__arrow"></i></div>
-
-              <ul class="dropdown__menu">
-                <li>
-                  <a href="tik.html" class="dropdown__link">Teknik Informatika </a>
+                  <a href="sisfo.html" class="dropdown__link"> Sistem Informasi </a>
                 </li>
                 <li>
-                  <a href="sisfo.html" class="dropdown__link"> Sistem Informasi</a>
-                </li>
-                <li>
-                  <a href="tifo.html" class="dropdown__link"> Teknologi Informasi</a>
+                  <a href="tifo.html" class="dropdown__link">Teknologi Informasi </a>
                 </li>
               </ul>
             </li>
 
-            <li><a href="#" class="nav__link">Pendaftaran</a></li>
+            <li><a href="pendaftaran.html" class="nav__link">Pendaftaran</a></li>
+
+            <!-- <li><a href="#" class="nav__link">Contact</a></li> -->
           </ul>
         </div>
       </nav>
     </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+        <img src="assets/img/home-bg.png" alt="image" class="home__bg" />
+        <div class="home__blur"></div>
+
+        <div class="home__container container grid">
+          <div class="home__data">
+            <h1 class="home__title">
+              Program Jalur Rekognisi Pembelajaran Lampau <br />
+              (RPL USTI)
+            </h1>
+
+            <!-- <p class="home__description">Explore the best beautiful tourist spots in the countries and see the world on all your amazing adventures.</p> -->
+
+            <!-- <a href="#" class="button button__opa-30"
+              >Explore The World
+              <i class="ri-arrow-right-line"></i>
+            </a> -->
+          </div>
+
+          <div class="home__swiper swiper">
+            <div class="swiper-wrapper">
+              <article class="home__article swiper-slide">
+                <img src="assets/img/img-1.jpg" alt="image" class="home__img" />
+              </article>
+
+              <article class="home__article swiper-slide">
+                <img src="assets/img/img-2.jpg" alt="image" class="home__img" />
+              </article>
+
+              <article class="home__article swiper-slide">
+                <img src="assets/img/img-3.jpg" alt="image" class="home__img" />
+              </article>
+
+              <article class="home__article swiper-slide">
+                <img src="assets/img/img-4.jpg" alt="image" class="home__img" />
+              </article>
+            </div>
+
+            <!-- swiper button -->
+            <!-- <div class="swiper-button-prev">
+              <i class="ri-arrow-left-long-line"></i>
+            </div>
+            <div class="swiper-button-next">
+              <i class="ri-arrow-right-long-line"></i>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <!--==================== INFO 1 ====================-->
+      <section class="info1 section" id="info1">
+        <div class="about__container container grid">
+          <div class="about__data">
+            <h2 class="section__title about__title">
+              Kini Telah Hadir RPL <br />
+              Di USTI
+            </h2>
+            <p class="about__description">ingin tau lebih dalam apa itu rpl, klik tombol di bawah ini untuk mengetahui lebih lanjut</p>
+            <a href="about.html" class="button">Read More</a>
+          </div>
+
+          <div class="about__img">
+            <!-- <div class="about__img-overlay">
+              <img src="assets/img/about-1.jpg" alt="" class="about__img-one" />
+            </div> -->
+
+            <div class="about__img-overlay">
+              <img src="assets/img/about-1.jpg" alt="" class="about__img-two" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== INFO 2 ====================-->
+      <section class="banner section" id="banner">
+        <div class="banner__container container grid">
+          <img src="assets/img/banner.png" alt="" />
+        </div>
+      </section>
+
+      <a href="https://wa.me/6285155330852" class="float-button" target="_blank" rel="noopener">
+        <i class="fa fa-whatsapp"></i>
+        <span>More Info<br /><small>0851-5533-0852</small> </span>
+      </a>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer__container container grid">
+        <a href="index.html" class="footer__logo">
+          <img src="assets/img/usti.jpg" alt="" />
+          <span>RPL USTI</span>
+        </a>
+
+        <div class="footer__content grid">
+          <div class="footer__data">
+            <h3 class="footer__title">About</h3>
+            <ul class="footer__links">
+              <li>
+                <a href="about.html" class="footer__link">Tentang RPL</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__data">
+            <h3 class="footer__title">Program Studi</h3>
+            <ul class="footer__links">
+              <li>
+                <a href="tik.html" class="footer__link"> Teknik Informatika</a>
+              </li>
+              <li>
+                <a href="sisfo.html" class="footer__link">Sistem Informasi</a>
+              </li>
+              <li>
+                <a href="tifo.html" class="footer__link"> Teknologi Informasi</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__data">
+            <h3 class="footer__title">Social Media</h3>
+            <div class="footer__social">
+              <a href="https://www.facebook.com/" target="_blank" class="footer__social-link" rel="noopener">
+                <i class="ri-facebook-box-fill"></i>
+              </a>
+              <a href="https://www.instagram.com/" target="_blank" class="footer__social-link" rel="noopener">
+                <i class="ri-instagram-fill"></i>
+              </a>
+              <a href="https://www.youtube.com/" target="_blank" class="footer__social-link" rel="noopener">
+                <i class="ri-youtube-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <span class="footer__copy footer__rights"> &#169; 2025 All Rights Reserved</span>
+    </footer>
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>

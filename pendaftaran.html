@@ -56,7 +56,7 @@
                   <a href="sisfo.html" class="dropdown__link"> Sistem Informasi </a>
                 </li>
                 <li>
-                  <a href="tifo.html" class="dropdown__link"> Teknologi Informasi </a>
+                  <a href="tifo.html" class="dropdown__link">Teknologi Informasi </a>
                 </li>
               </ul>
             </li>
@@ -121,69 +121,65 @@
         </div>
       </section>
 
-      <!--==================== RPL SISTEM INFORMASI ====================-->
-      <section class="tik section" id="tik">
-        <div class="tik__container container grid">
-          <h1 class="section__title">Sistem Informasi</h1>
-          <img src="assets/img/sistem informasi.jpg" alt="" />
-          <h2>A. Informasi Umum</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ex enim fugit nemo? Similique consequuntur et corporis impedit hic eligendi doloribus, vero saepe modi, asperiores temporibus odit eum ad voluptatem harum porro,
-            quibusdam tempore officiis natus enim? Soluta consectetur labore ipsam, voluptates quidem temporibus, ea fugiat tempore distinctio, eos incidunt?
-          </p>
-          <h2>B. Kriteria Peserta RPL SISTEM INFORMASI</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ex enim fugit nemo? Similique consequuntur et corporis impedit hic eligendi doloribus, vero saepe modi, asperiores temporibus odit eum ad voluptatem harum porro,
-            quibusdam tempore officiis natus enim? Soluta consectetur labore ipsam, voluptates quidem temporibus, ea fugiat tempore distinctio, eos incidunt?
-          </p>
-          <ol>
-            <li style="margin-left: 1rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, aut!</li>
-            <li style="margin-left: 1rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, aut!</li>
-            <li style="margin-left: 1rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, aut!</li>
-            <li style="margin-left: 1rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, aut!</li>
-            <li style="margin-left: 1rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, aut!</li>
-          </ol>
-          <h2>C. Rincian Biaya</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ex enim fugit nemo? Similique consequuntur et corporis impedit hic eligendi doloribus, vero saepe modi, asperiores temporibus odit eum ad voluptatem harum porro,
-            quibusdam tempore officiis natus enim? Soluta consectetur labore ipsam, voluptates quidem temporibus, ea fugiat tempore distinctio, eos incidunt?
-          </p>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Jumlah Matkul</th>
-                <th>Lama Semester Studi</th>
-                <th>Total Biaya Kuliah</th>
-                <th>Penghematan Biaya</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-label="Jumlah Matkul">5 mata kuliah</td>
-                <td data-label="Lama Semester Studi">7 semester</td>
-                <td data-label="Total Biaya Kuliah">Rp.85,600,000</td>
-                <td data-label="Penghematan Biaya">Rp.6,950,000</td>
-              </tr>
-              <tr>
-                <td data-label="Jumlah Matkul">5 mata kuliah</td>
-                <td data-label="Lama Semester Studi">7 semester</td>
-                <td data-label="Total Biaya Kuliah">Rp.85,600,000</td>
-                <td data-label="Penghematan Biaya">Rp.6,950,000</td>
-              </tr>
-              <tr>
-                <td data-label="Jumlah Matkul">5 mata kuliah</td>
-                <td data-label="Lama Semester Studi">7 semester</td>
-                <td data-label="Total Biaya Kuliah">Rp.85,600,000</td>
-                <td data-label="Penghematan Biaya">Rp.6,950,000</td>
-              </tr>
-              <tr>
-                <td data-label="Jumlah Matkul">5 mata kuliah</td>
-                <td data-label="Lama Semester Studi">7 semester</td>
-                <td data-label="Total Biaya Kuliah">Rp.85,600,000</td>
-                <td data-label="Penghematan Biaya">Rp.6,950,000</td>
-              </tr>
-            </tbody>
-          </table>
+      <section class="form section" id="info2">
+        <div class="form__container container grid">
+          <h1 class="section__title">FORM PENDAFTARAN RPL USTI</h1>
+          <form action="#" class="form">
+            <div class="input-box">
+              <label>Nama Lengkap</label>
+              <input type="text" placeholder="Nama Lengkap Anda..." required />
+            </div>
+
+            <div class="input-box">
+              <label>Email</label>
+              <input type="email" placeholder="Alamat Email Anda..." required />
+            </div>
+
+            <div class="input-box">
+              <label>No.Telpon/ Whatsapp</label>
+              <input type="number" placeholder="Nomor Telepon / No. Wa Anda... " required />
+            </div>
+            <div class="column">
+              <div class="input-box">
+                <label>Tempat Lahir</label>
+                <input type="text" placeholder="Tempat Lahir Anda" required />
+              </div>
+              <div class="input-box">
+                <label>Tanggal Lahir</label>
+                <input type="date" placeholder="Tanggal Lahir Anda" required />
+              </div>
+            </div>
+            <div class="gender-box">
+              <h3>Jenis Kelamin</h3>
+              <div class="gender-option">
+                <div class="gender">
+                  <input type="radio" id="check-male" name="gender" checked />
+                  <label for="check-male">Laki-laki</label>
+                </div>
+                <div class="gender">
+                  <input type="radio" id="check-female" name="gender" />
+                  <label for="check-female">Perempuan</label>
+                </div>
+              </div>
+            </div>
+            <div class="input-box address">
+              <label>Alamat</label>
+              <input type="text" placeholder="Alamat 1 (Sesuai KTP)" required />
+              <input type="text" placeholder="Alamat 2 (Jika tinggal di tempat berbeda)" required />
+              <div class="column">
+                <div class="select-box">
+                  <label for="jurusan">Pilih Jurusan: </label>
+                  <select name="jurusan" id="jurusan">
+                    <option>Jurusan</option>
+                    <option>Teknik Informatika</option>
+                    <option>Sistem Informasi</option>
+                    <option>Teknologi Informasi</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
         </div>
       </section>
       <a href="https://wa.me/6285155330852" class="float-button" target="_blank" rel="noopener">
