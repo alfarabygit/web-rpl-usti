@@ -45,7 +45,7 @@ const sr = ScrollReveal({
 
 sr.reveal(
   `.home__data, .home__swiper, .banner__container, .info__container, .form__container, 
-.tik__container, .sisfo__container, .tifo__container, 
+.tik__container, .sisfo__container, .tifo__container, .table, 
 .footer__logo, .footer__data`,
   {
     origin: "top",
@@ -53,12 +53,12 @@ sr.reveal(
   }
 );
 
-sr.reveal(`.about__data `, {
+sr.reveal(`.about__data, h2 `, {
   origin: "left",
   interval: 100,
 });
 
-sr.reveal(`.about__img-overlay`, {
+sr.reveal(`.about__img-overlay, ol, p`, {
   origin: "right",
   interval: 100,
 });
