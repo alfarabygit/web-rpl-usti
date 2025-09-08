@@ -17,7 +17,12 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
     <!--=============== CSS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!--=============== SWEETALERT2 ===============-->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <title>RPL Universitas Sains dan Teknologi Indonesia(USTI) - Home</title>
   </head>
@@ -56,7 +61,7 @@
                   <a href="sisfo.html" class="dropdown__link"> Sistem Informasi </a>
                 </li>
                 <li>
-                  <a href="tifo.html" class="dropdown__link">Teknologi Informasi </a>
+                  <a href="tifo.html" class="dropdown__link"> Teknologi Informasi </a>
                 </li>
               </ul>
             </li>
@@ -82,13 +87,6 @@
               Program Jalur Rekognisi Pembelajaran Lampau <br />
               (RPL USTI)
             </h1>
-
-            <!-- <p class="home__description">Explore the best beautiful tourist spots in the countries and see the world on all your amazing adventures.</p> -->
-
-            <!-- <a href="#" class="button button__opa-30"
-              >Explore The World
-              <i class="ri-arrow-right-line"></i>
-            </a> -->
           </div>
 
           <div class="home__swiper swiper">
@@ -123,68 +121,150 @@
 
       <section class="form section" id="info2">
         <div class="form__container container grid">
-          <h1 class="section__title">FORM PENDAFTARAN RPL USTI</h1>
-          <form action="#" class="form">
+          <form action="#" class="form" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+            <h1 class="section__title">FORM PENDAFTARAN RPL USTI</h1>
+            <h2>Data Pribadi</h2>
             <div class="input-box">
               <label>Nama Lengkap</label>
-              <input type="text" placeholder="Nama Lengkap Anda..." required />
+              <input type="text" name="nama_lengkap" placeholder="Nama Lengkap Anda..." required />
             </div>
 
-            <div class="input-box">
-              <label>Email</label>
-              <input type="email" placeholder="Alamat Email Anda..." required />
-            </div>
-
-            <div class="input-box">
-              <label>No.Telpon/ Whatsapp</label>
-              <input type="number" placeholder="Nomor Telepon / No. Wa Anda... " required />
-            </div>
             <div class="column">
               <div class="input-box">
                 <label>Tempat Lahir</label>
-                <input type="text" placeholder="Tempat Lahir Anda" required />
+                <input type="text" name="tempat_lahir" placeholder="Tempat Lahir Anda" required />
               </div>
               <div class="input-box">
                 <label>Tanggal Lahir</label>
-                <input type="date" placeholder="Tanggal Lahir Anda" required />
+                <input type="date" name="tanggal_lahir" placeholder="Tanggal Lahir Anda" required />
               </div>
             </div>
+
             <div class="gender-box">
               <h3>Jenis Kelamin</h3>
               <div class="gender-option">
                 <div class="gender">
-                  <input type="radio" id="check-male" name="gender" checked />
+                  <input type="radio" id="check-male" name="jenis_kelamin" checked />
                   <label for="check-male">Laki-laki</label>
                 </div>
                 <div class="gender">
-                  <input type="radio" id="check-female" name="gender" />
+                  <input type="radio" id="check-female" name="jenis_kelamin" />
                   <label for="check-female">Perempuan</label>
                 </div>
               </div>
             </div>
+
+            <div class="gender-box status">
+              <h3>Status</h3>
+              <div class="gender-option status">
+                <div class="gender">
+                  <input type="radio" id="belum-menikah" name="status" checked />
+                  <label for="belum-menikah">Belum Menikah</label>
+                </div>
+                <div class="gender">
+                  <input type="radio" id="menikah" name="status" />
+                  <label for="menikah">Sudah Menikah</label>
+                </div>
+                <div class="gender">
+                  <input type="radio" id="duda" name="status" />
+                  <label for="duda">Duda</label>
+                </div>
+                <div class="gender">
+                  <input type="radio" id="janda" name="status" />
+                  <label for="janda">Janda</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="gender-box">
+              <h3>Kewarganegaraan</h3>
+              <div class="gender-option kewarganegaraan">
+                <div class="gender">
+                  <input type="radio" id="wni" name="kewarganegaraan" checked />
+                  <label for="wni">WNI</label>
+                </div>
+                <div class="gender">
+                  <input type="radio" id="wna" name="kewarganegaraan" />
+                  <label for="wna">WNA</label>
+                </div>
+              </div>
+            </div>
+
             <div class="input-box address">
-              <label>Alamat</label>
-              <input type="text" placeholder="Alamat 1 (Sesuai KTP)" required />
-              <input type="text" placeholder="Alamat 2 (Jika tinggal di tempat berbeda)" required />
+              <label>Alamat & Kode Pos</label>
+              <input type="text" name="alamat" placeholder="Alamat anda..." required />
+              <input type="number" name="kode_pos" id="kode_pos" placeholder="Kode Pos...." />
+            </div>
+
+            <div class="input-box">
+              <label>No.Telpon / Whatsapp</label>
+              <input type="number" name="no_telpon" placeholder="Nomor Telepon / No. Wa Anda... " required />
+            </div>
+            <div class="input-box">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="Alamat Email Anda..." required />
+            </div>
+
+            <br />
+            <br />
+            <h2>Data Pendidikan</h2>
+            <div class="input-box">
+              <label for="pendidikan_terakhir">Pendidikan Terakhir: </label>
               <div class="column">
                 <div class="select-box">
-                  <label for="jurusan">Pilih Jurusan: </label>
-                  <select name="jurusan" id="jurusan">
-                    <option>Jurusan</option>
-                    <option>Teknik Informatika</option>
-                    <option>Sistem Informasi</option>
-                    <option>Teknologi Informasi</option>
+                  <select name="pendidikan_terakhir" id="pendidikan_terakhir">
+                    <option>Pendidikan Terakhir :</option>
+                    <option>SMA</option>
+                    <option>SMK</option>
+                    <option>D3</option>
                   </select>
                 </div>
               </div>
             </div>
+
+            <div class="input-box">
+              <label>Asal Sekolah / Perguruan Tinggi</label>
+              <input type="text" name="asal_instansi" placeholder="Asal Sekolah / Perguruan Tinggi anda" required />
+            </div>
+
+            <div class="input-box">
+              <label>Program Studi</label>
+              <input type="text" name="program_studi" placeholder="Program Studi(Untuk tamatan SMA/Sederajat boleh tulis tidak ada)" required />
+            </div>
+
+            <div class="input-box">
+              <label>Tahun Lulus</label>
+              <input type="number" name="tahun_lulus" placeholder="Tahun Lulus" required />
+            </div>
+
+            <div class="input-box">
+              <label>Daftar Riwayat Hidup / CV(Dalam Format PDF, Max 2 MB)</label>
+              <input type="file" name="file_cv" placeholder="format pdf/docx" accept=".pdf" required />
+            </div>
+
+            <div class="input-box">
+              <label class="form-label">Upload CV (PDF/DOCX, maks 5MB)</label>
+              <input type="file" name="file_cv" class="form-control" placeholder="format pdf/docx" accept=".pdf,.doc,.docx" />
+            </div>
+
+            <div class="input-box">
+              <label class="form-label">Upload Transkrip Nilai (PDF/JPG/PNG, maks 5MB)</label>
+              <input type="file" name="file_transkrip" class="form-control" placeholder="format pdf/docx" accept=".pdf,.jpg,.jpeg,.png" />
+            </div>
+
+            <div class="input-box">
+              <label class="form-label">File Pendukung Lainnya (opsional)</label>
+              <input type="file" name="file_lainnya" class="form-control" placeholder="format pdf/docx" accept=".pdf,.jpg,.jpeg,.png,.zip" />
+            </div>
+
+            <sub>Note: Untuk lulusan SMA atau sederajat, kolom program studi tulis tidak ada</sub>
             <button type="submit">Submit</button>
           </form>
         </div>
       </section>
       <a href="https://wa.me/6285155330852" class="float-button" target="_blank" rel="noopener">
         <i class="fa fa-whatsapp"></i>
-        <span>More Info<br /><small>0851-5533-0852</small> </span>
+        <span>Info wa<br /><small>0851-5533-0852</small> </span>
       </a>
     </main>
 
@@ -224,13 +304,13 @@
           <div class="footer__data">
             <h3 class="footer__title">Social Media</h3>
             <div class="footer__social">
-              <a href="https://www.facebook.com/" target="_blank" class="footer__social-link" rel="noopener">
+              <a href="https://www.facebook.com/ustiofficial" target="_blank" class="footer__social-link" rel="noopener" title="facebook">
                 <i class="ri-facebook-box-fill"></i>
               </a>
-              <a href="https://www.instagram.com/" target="_blank" class="footer__social-link" rel="noopener">
+              <a href="https://www.instagram.com/ustiofficial/" target="_blank" class="footer__social-link" rel="noopener" title="instagram">
                 <i class="ri-instagram-fill"></i>
               </a>
-              <a href="https://www.youtube.com/" target="_blank" class="footer__social-link" rel="noopener">
+              <a href="https://www.youtube.com/@ustiofficial" target="_blank" class="footer__social-link" rel="noopener" title="youtube">
                 <i class="ri-youtube-fill"></i>
               </a>
             </div>
@@ -248,5 +328,43 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+    <script>
+      // Bootstrap validation
+      (() => {
+        "use strict";
+        const forms = document.querySelectorAll(".needs-validation");
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+
+      // SweetAlert2 success popup
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get("success") === "1") {
+        Swal.fire({
+          icon: "success",
+          title: "Pendaftaran Berhasil",
+          text: "Data Anda telah terkirim. Silahkan Ditunggu Konfirmasi dari USTI melalui Whatsapp ya, Terima kasih!",
+          confirmButtonText: "OK",
+        });
+      }
+
+      // Tampilkan pesan error (opsional)
+      if (urlParams.get("error")) {
+        Swal.fire({ icon: "error", title: "Gagal", text: urlParams.get("error") });
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

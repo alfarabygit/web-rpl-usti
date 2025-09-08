@@ -547,9 +547,9 @@ img {
   background-color: darkblue;
   color: #fff;
 }
-.table tbody tr:nth-child(even) {
+/* .table tbody tr:nth-child(even) {
   background-color: #f3f3;
-}
+} */
 /*=============== FORM PENDAFTARAN ===============*/
 
 .form .input-box {
