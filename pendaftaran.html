@@ -116,12 +116,12 @@
 
       <section class="form section" id="info2">
         <div class="form__container container grid">
-          <form action="#" class="form" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+          <form action="proses.php" class="form" method="POST" enctype="multipart/form-data">
             <h1 class="section__title">FORM PENDAFTARAN RPL USTI</h1>
             <h2>Data Pribadi</h2>
             <div class="input-box">
               <label>Nama Lengkap</label>
-              <input type="text" name="nama_lengkap" placeholder="Nama Lengkap Anda..." required />
+              <input type="text" name="nama_lengkap" placeholder="Nama Lengkap Anda..." autofocus required />
             </div>
 
             <div class="column">
@@ -139,11 +139,11 @@
               <h3>Jenis Kelamin</h3>
               <div class="gender-option">
                 <div class="gender">
-                  <input type="radio" id="check-male" name="jenis_kelamin" checked />
+                  <input type="radio" id="check-male" name="jenis_kelamin" value="Laki-laki" checked />
                   <label for="check-male">Laki-laki</label>
                 </div>
                 <div class="gender">
-                  <input type="radio" id="check-female" name="jenis_kelamin" />
+                  <input type="radio" id="check-female" name="jenis_kelamin" value="Perempuan" />
                   <label for="check-female">Perempuan</label>
                 </div>
               </div>
@@ -153,27 +153,27 @@
               <h3>Agama</h3>
               <div class="gender-option agama">
                 <div class="gender">
-                  <input type="radio" id="islam" name="agama" checked />
+                  <input type="radio" id="islam" name="agama" value="Islam" checked />
                   <label for="islam">Islam</label>
                 </div>
                 <div class="gender">
-                  <input type="radio" id="kristen" name="agama" />
+                  <input type="radio" id="kristen" name="agama" value="Kristen" />
                   <label for="kristen">Kristen</label>
                 </div>
                 <div class="gender">
-                  <input type="radio" id="katolik" name="agama" />
+                  <input type="radio" id="katolik" name="agama" value="Katolik" />
                   <label for="katolik">Katolik</label>
                 </div>
                 <div class="gender">
-                  <input type="radio" id="hindu" name="agama" />
+                  <input type="radio" id="hindu" name="agama" value="Hindu" />
                   <label for="hindu">Hindu</label>
                 </div>
                 <div class="gender">
-                  <input type="radio" id="buddha" name="agama" />
+                  <input type="radio" id="buddha" name="agama" value="Buddha" />
                   <label for="buddha">Buddha</label>
                 </div>
                 <div class="gender">
-                  <input type="radio" id="konghucu" name="agama" />
+                  <input type="radio" id="konghucu" name="agama" value="Konghucu" />
                   <label for="konghucu">Konghucu</label>
                 </div>
               </div>
@@ -183,11 +183,11 @@
               <h3>Status</h3>
               <div class="gender-option status">
                 <div class="gender">
-                  <input type="radio" id="belum-menikah" name="status" checked />
+                  <input type="radio" id="belum-menikah" name="status_perkawinan" value="Belum Menikah" checked />
                   <label for="belum-menikah">Belum Menikah</label>
                 </div>
                 <div class="gender">
-                  <input type="radio" id="menikah" name="status" />
+                  <input type="radio" id="menikah" name="status_perkawinan" value="Sudah Menikah" />
                   <label for="menikah">Sudah Menikah</label>
                 </div>
               </div>
@@ -197,11 +197,11 @@
               <h3>Kewarganegaraan</h3>
               <div class="gender-option kewarganegaraan">
                 <div class="gender">
-                  <input type="radio" id="wni" name="kewarganegaraan" checked />
+                  <input type="radio" id="wni" name="kewarganegaraan" value="WNI" checked />
                   <label for="wni">WNI</label>
                 </div>
                 <div class="gender">
-                  <input type="radio" id="wna" name="kewarganegaraan" />
+                  <input type="radio" id="wna" name="kewarganegaraan" value="WNA" />
                   <label for="wna">WNA</label>
                 </div>
               </div>
@@ -215,7 +215,7 @@
 
             <div class="input-box">
               <label>No.Telpon / Whatsapp</label>
-              <input type="number" name="no_telpon" placeholder="Nomor Telepon / No. Wa Anda... " required />
+              <input type="number" name="no_telepon" placeholder="Nomor Telepon / No. Wa Anda... " required />
             </div>
             <div class="input-box">
               <label>Email</label>
@@ -228,22 +228,22 @@
                 <div class="select-box">
                   <select name="jalur_rpl" id="jalur_rpl">
                     <option>Pilih Jalur RPL :</option>
-                    <option>Perolehan SKS(untuk lulusan SMA/Sederajat)</option>
-                    <option>Transfer SKS(untuk lulusan D3)</option>
+                    <option value="Perolehan SKS">Perolehan SKS(untuk lulusan SMA/Sederajat)</option>
+                    <option value="Transfer SKS">Transfer SKS(untuk lulusan D3)</option>
                   </select>
                 </div>
               </div>
             </div>
 
             <div class="input-box">
-              <label for="jalur_rpl">Program Studi yang diambil: </label>
+              <label for="program_studi">Program Studi yang diambil: </label>
               <div class="column">
                 <div class="select-box">
-                  <select name="jalur_rpl" id="jalur_rpl">
+                  <select name="program_studi" id="program_studi">
                     <option>Pilih Program Studi :</option>
-                    <option>Teknik Informatika(TI)</option>
-                    <option>Sistem Informasi(SI)</option>
-                    <option>Teknologi Informasi(TIF)</option>
+                    <option value="Teknik Informatika">Teknik Informatika(TI)</option>
+                    <option value="Sistem Informasi">Sistem Informasi(SI)</option>
+                    <option value="Teknologi Informasi">Teknologi Informasi(TIF)</option>
                   </select>
                 </div>
               </div>
@@ -257,9 +257,9 @@
                 <div class="select-box">
                   <select name="pendidikan_terakhir" id="pendidikan_terakhir">
                     <option>Pendidikan Terakhir :</option>
-                    <option>SMA/MA</option>
-                    <option>SMK</option>
-                    <option>D3</option>
+                    <option value="SMA/MA">SMA/MA</option>
+                    <option value="SMK">SMK</option>
+                    <option value="D3">D3</option>
                   </select>
                 </div>
               </div>
@@ -267,16 +267,16 @@
 
             <div class="input-box">
               <label>Asal Sekolah / Perguruan Tinggi</label>
-              <input type="text" name="asal_instansi" placeholder="Asal Sekolah / Perguruan Tinggi anda" required />
+              <input type="text" name="asal_sekolah_pt" placeholder="Asal Sekolah / Perguruan Tinggi anda" required />
             </div>
 
             <div class="input-box">
-              <label>Jurusan</label>
-              <input type="text" name="jurusan" placeholder="Asal Jurusan(Khusus untuk jalur perolehan sks)" required />
+              <label>Asal Jurusan Sekolah</label>
+              <input type="text" name="asal_jurusan" placeholder="Asal Jurusan(Khusus untuk jalur perolehan sks)" required />
             </div>
             <div class="input-box">
-              <label>Program Studi</label>
-              <input type="text" name="program_studi" placeholder="Asal Program Studi(Khusus untuk jalur transfer sks)" required />
+              <label>Asal Program Studi</label>
+              <input type="text" name="asal_program_studi" placeholder="Asal Program Studi(Khusus untuk jalur transfer sks)" required />
             </div>
 
             <div class="input-box">
@@ -286,6 +286,7 @@
 
             <br />
             <h2>Upload Data RPL</h2>
+
             <div class="input-box">
               <label class="form-label">Upload Formulir Aplikasi RPL (Dalam Format PDF, maks 2MB)</label>
               <input type="file" name="file_formulir" class="form-control" placeholder="format pdf" accept=".pdf,.doc,.docx" />
@@ -315,12 +316,12 @@
 
             <div class="input-box">
               <label class="form-label">Upload Nilai Rapor Sekolah / Transkrip Nilai (Dalam Format PDF, maks 2MB)</label>
-              <input type="file" name="file_transkrip" class="form-control" placeholder="format pdf" accept=".pdf" />
+              <input type="file" name="file_nilai" class="form-control" placeholder="format pdf" accept=".pdf,.doc,.docx" />
             </div>
 
             <div class="input-box">
               <label class="form-label">File Pendukung Lainnya (digabung dalam satu file PDF atau zip, maks 2MB)</label>
-              <input type="file" name="file_lainnya" class="form-control" placeholder="format pdf/zip" accept=".pdf,.zip" />
+              <input type="file" name="file_pendukung" class="form-control" placeholder="format pdf/zip" accept=".pdf,.doc,.zip" />
             </div>
 
             <button type="submit">Submit</button>
@@ -393,5 +394,38 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+    <!--=============== SWEETALERT JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get("status");
+
+        if (status === "success") {
+          Swal.fire({
+            icon: "success",
+            title: "Berhasil!",
+            text: "Pendaftaran berhasil dikirim.",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "OK",
+          }).then(() => {
+            if (form) form.reset();
+            localStorage.clear(); // 🧹 hapus data dari localStorage
+            window.history.replaceState({}, document.title, window.location.pathname);
+          });
+        } else if (status === "error") {
+          Swal.fire({
+            icon: "error",
+            title: "Gagal!",
+            text: "Terjadi kesalahan saat menyimpan data.",
+            confirmButtonColor: "#d33",
+            confirmButtonText: "OK",
+          }).then(() => {
+            window.history.replaceState({}, document.title, window.location.pathname);
+          });
+        }
+      });
+    </script>
   </body>
 </html>
