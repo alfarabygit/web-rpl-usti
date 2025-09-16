@@ -18,6 +18,7 @@
   --opacity-color-30: hsla(0, 0%, 90%, 0.3);
   --opacity-color-20: hsla(0, 0%, 90%, 0.2);
   --navbar-color: hsl(213, 100%, 30%);
+  --border-color: hsl(230, 50%, 90%);
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Montserrat", sans-serif;
@@ -487,6 +488,77 @@ img {
   text-align: center;
 }
 
+/*=============== NEWS ===============*/
+.news__container {
+  padding-block: 5rem;
+}
+
+.news__content {
+  margin-inline: 1.75rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.news__article {
+  width: 300px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.news__image {
+  position: relative;
+  background-color: var(--navbar-color);
+  padding-top: 1.5rem;
+  margin-bottom: -0.75rem;
+}
+
+.news__data {
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.news__img {
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.news__shadow {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 3.75rem;
+  left: 0;
+  right: 0;
+  filter: blur(45px);
+  margin-inline: auto;
+}
+
+.news__name {
+  font-size: var(--h2-font-size);
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+}
+
+.news__name {
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+}
+
+.news__button {
+  display: inline-block;
+  background-color: var(--navbar-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  color: var(--white-color);
+  font-weight: 600;
+}
 /*=============== ABOUT ===============*/
 .about__data {
   text-align: center;
@@ -708,6 +780,10 @@ img {
   .home__title {
     font-size: 2.5rem;
   }
+  .news__data {
+    padding: 1rem;
+  }
+
   .footer__content {
     grid-template-columns: max-content;
   }
@@ -782,8 +858,11 @@ img {
   .about__description {
     margin-bottom: var(--mb-2);
   }
+  .news__content {
+    margin-inline: 3rem;
+  }
   .footer__content {
-    grid-template-columns: repeat(4, max-content);
+    grid-template-columns: repeat(3, max-content);
   }
 }
 
@@ -886,6 +965,9 @@ img {
   }
   .about__img-two {
     width: 290px;
+  }
+  .events__container {
+    max-width: 1200px;
   }
   .footer {
     padding-top: 4.5rem;

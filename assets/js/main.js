@@ -28,13 +28,30 @@ const swiperHome = new Swiper(".home__swiper", {
     disableOnInteraction: false,
   },
 });
-/*=============== CHANGE BACKGROUND HEADER ===============*/
-// const bgHeader = () => {
-//   const header = document.getElementById("header");
 
-//   this.scrollY >= 50 ? header.classList.add("bg-header") : header.classList.remove("bg-header");
-// };
-// window.addEventListener("scroll", bgHeader);
+/*=============== NEWS SWIPER ===============*/
+let swiperCards = new Swiper(".news__content", {
+  loop: true,
+  spaceBetween: 32,
+  grabCursor: true,
+  speed: 5000,
+  slidesPerView: "auto",
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    968: {
+      slidesPerView: 3,
+    },
+  },
+});
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
 const sr = ScrollReveal({
@@ -43,22 +60,17 @@ const sr = ScrollReveal({
   // reset: true,
 });
 
-sr.reveal(
-  `.home__data, .home__swiper, .banner__container, .info__container, .form__container, 
-.tik__container, .sisfo__container, .tifo__container, .table, 
-.footer__logo, .footer__data`,
-  {
-    origin: "top",
-    interval: 100,
-  }
-);
+sr.reveal(`.home__data, .home__swiper, .banner__container, .info__container, .form__container, .tik__container, .sisfo__container, .tifo__container, .footer__logo, .footer__data, .footer__rights`, {
+  origin: "top",
+  interval: 100,
+});
 
-sr.reveal(`.about__data, h2 `, {
+sr.reveal(`.about__data `, {
   origin: "left",
   interval: 100,
 });
 
-sr.reveal(`.about__img-overlay, ol, p`, {
+sr.reveal(`.about__img-overlay`, {
   origin: "right",
   interval: 100,
 });
