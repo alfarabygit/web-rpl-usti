@@ -60,12 +60,12 @@ const sr = ScrollReveal({
   // reset: true,
 });
 
-sr.reveal(`.home__data, .home__swiper, .banner__container, .info__container, .form__container, .tik__container, .sisfo__container, .tifo__container, .footer__logo, .footer__data, .footer__rights`, {
+sr.reveal(`.home__data, .home__swiper, .banner__container, .info__container, .form__container, .tik__container, .sisfo__container, .tifo__container, .news__container, .footer__logo, .footer__data, .footer__rights`, {
   origin: "top",
   interval: 100,
 });
 
-sr.reveal(`.about__data `, {
+sr.reveal(`.about__data, .section__title `, {
   origin: "left",
   interval: 100,
 });
