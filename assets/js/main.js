@@ -65,7 +65,7 @@ sr.reveal(`.home__data, .home__swiper, .banner__container, .info__container, .fo
   interval: 100,
 });
 
-sr.reveal(`.about__data, .section__title `, {
+sr.reveal(`.about__data `, {
   origin: "left",
   interval: 100,
 });
