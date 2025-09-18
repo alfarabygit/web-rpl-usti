@@ -1,9 +1,9 @@
 <?php
-// Konfigurasi database
-$host = "localhost";
-$user = "root";       // sesuaikan dengan user database
-$pass = "";           // sesuaikan dengan password database
-$db   = "rpl_usti";
+// Konfigurasi database untuk tes input di infinity free hosting, jika tak berhasil karena limit silahkan coba di localhost
+$host = "sql201.infinityfree.com";
+$user = "if0_39942924";       // sesuaikan dengan user database
+$pass = "R4eYSKONyJ9rmz";           // sesuaikan dengan password database
+$db   = "if0_39942924_rpl_usti";
 
 // Koneksi ke database
 $conn = new mysqli($host, $user, $pass, $db);
