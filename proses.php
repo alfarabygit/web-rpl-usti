@@ -35,7 +35,7 @@ $asal_program_studi = $_POST['asal_program_studi'];
 $tahun_lulus        = $_POST['tahun_lulus'];
 
 // Upload file
-$dir_upload = "uploads/"; 
+$dir_upload = "/htdocs/uploads"; 
 if (!is_dir($dir_upload)) {
     mkdir($dir_upload, 0777, true);
 }
